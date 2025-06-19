@@ -83,3 +83,6 @@ batsman1.intro()
 batsman1.show_status()
 
 
+print(CrickeTeam.__doc__)
+print(CrickeTeam.__dict__)
+print(CrickeTeam.__name__)

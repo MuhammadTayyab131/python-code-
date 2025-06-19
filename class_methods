@@ -1,0 +1,81 @@
+
+
+class Players:
+    team = "pakistan"
+
+    def __init__(self,name):
+        self.name = name
+
+    @classmethod
+    def change_team (cls, nem_team):
+        cls.team = nem_team
+
+player1 = Players("Kaleem")
+player2 = Players("Numan")
+
+print(player1.team)
+print(player2.team)
+
+Players.change_team("India")
+
+print(player1.team)
+print(player2.team)
+
+
+# form_string method
+
+class Cricketer:
+    def __init__(self,name,role):
+        self.name = name
+        self.role = role
+    def show_intro(self):
+        print(f"I am {self.name} and I am a right-arm {self.role}")
+
+    @classmethod
+    def from_string (cls,new_info):
+        name,role = new_info.split("-")
+        return cls(name,role)
+    
+
+
+person1 = Cricketer("Tayyab", "Fast bwler")
+
+person1.show_intro()
+
+person2 = Cricketer.from_string("Abrar-Batsman")
+
+person2.show_intro()
+            
+
+# regular method with full control
+
+
+class Cricketer:
+    def __init__(self,name,role):
+        self.name = name
+        self.role = role
+    def show_intro(self):
+        print(f"I am {self.name} and I am a right-arm {self.role}")
+
+    @classmethod
+    def from_string (cls,name, role):
+        return cls(name,role)
+    
+
+
+person1 = Cricketer("Tayyab", "Fast bwler")
+
+person1.show_intro()
+
+person2 = Cricketer.from_string("Abrar","Batsman")
+
+person2.show_intro()
+
+
+
+
+
+
+
+
+    
